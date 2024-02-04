@@ -1,9 +1,9 @@
-package generator.service.impl;
+package cn.kevinwang.old_people_service.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import cn.kevinwang.old_people_service.model.po.ServiceStatus;
 import cn.kevinwang.old_people_service.service.ServiceStatusService;
-import cn.kevinwang.old_people_service.dao.ServiceStatusMapper;
+import cn.kevinwang.old_people_service.dao.ServiceStatusDao;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 * @createDate 2024-02-04 19:59:53
 */
 @Service
-public class ServiceStatusServiceImpl extends ServiceImpl<ServiceStatusMapper, ServiceStatus>
+public class ServiceStatusServiceImpl extends ServiceImpl<ServiceStatusDao, ServiceStatus>
     implements ServiceStatusService{
 
 }

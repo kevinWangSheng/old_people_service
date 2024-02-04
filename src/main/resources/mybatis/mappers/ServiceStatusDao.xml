@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.kevinwang.old_people_service.dao.ServiceStatusMapper">
+<mapper namespace="cn.kevinwang.old_people_service.dao.ServiceStatusDao">
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.old_people_service.model.po.ServiceStatus">
             <id property="id" column="id" jdbcType="BIGINT"/>
@@ -16,4 +16,12 @@
         id,current_status,next_status,
         create_time,updated_at
     </sql>
+    <select id="selectNextStatusByCurrentStatus" resultType="java.lang.String">
+        select next_status from service_status
+        <where>
+            <if test="currentStatus != null and '' != currentStatus">
+                current_status = #{currentStatus}
+            </if>
+        </where>
+    </select>
 </mapper>

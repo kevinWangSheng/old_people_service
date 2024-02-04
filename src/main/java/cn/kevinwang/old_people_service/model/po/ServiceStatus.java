@@ -1,4 +1,4 @@
-package generator.domain;
+package cn.kevinwang.old_people_service.model.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

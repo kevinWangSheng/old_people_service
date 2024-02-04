@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.kevinwang.old_people_service.dao.CaregiversMapper">
+<mapper namespace="cn.kevinwang.old_people_service.dao.CaregiversDao">
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.old_people_service.model.po.Caregivers">
             <id property="id" column="id" jdbcType="BIGINT"/>

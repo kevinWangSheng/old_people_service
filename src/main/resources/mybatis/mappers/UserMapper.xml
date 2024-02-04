@@ -2,7 +2,31 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.kevinwang.old_people_service.model.po.User">
+<mapper namespace="cn.kevinwang.old_people_service.dao.UserDao">
 
 
+    <select id="getUsernameAndPasswordByUsername" resultType="cn.kevinwang.old_people_service.model.po.User">
+        select username, password from user
+        <where>
+            <if test="username != null and username != ''">
+                and username = #{username}
+            </if>
+        </where>
+    </select>
+    <select id="getPhoneAndPasswordByPhone" resultType="cn.kevinwang.old_people_service.model.po.User">
+        select phone, password from user
+        <where>
+            <if test="null != phone and '' != phone">
+                and phone = #{phone}
+            </if>
+        </where>
+    </select>
+    <select id="getEmailAndPasswordByEmail" resultType="cn.kevinwang.old_people_service.model.po.User">
+        select email, password from user
+        <where>
+            <if test="null != email and '' != email">
+                and email = #{email}
+            </if>
+        </where>
+    </select>
 </mapper>

@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2024-02-04 19:59:53
 * @Entity cn.kevinwang.old_people_service.model.po.Caregivers
 */
-public interface CaregiversMapper extends BaseMapper<Caregivers> {
+public interface CaregiversDao extends BaseMapper<Caregivers> {
 
 }
 

@@ -1,5 +1,6 @@
 package cn.kevinwang.old_people_service.service;
 
+import cn.kevinwang.old_people_service.model.dto.SchedulesDto;
 import cn.kevinwang.old_people_service.model.po.Schedules;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -10,4 +11,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface SchedulesService extends IService<Schedules> {
 
+    boolean updateToNextStatus(SchedulesDto schedulesDto);
 }

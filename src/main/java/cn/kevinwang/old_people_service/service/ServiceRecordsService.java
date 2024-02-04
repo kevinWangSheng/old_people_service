@@ -1,5 +1,6 @@
 package cn.kevinwang.old_people_service.service;
 
+import cn.kevinwang.old_people_service.model.dto.ServiceRecordsDto;
 import cn.kevinwang.old_people_service.model.po.ServiceRecords;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -10,4 +11,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface ServiceRecordsService extends IService<ServiceRecords> {
 
+    boolean updateToNextStatus(ServiceRecordsDto serviceRecordDto);
 }

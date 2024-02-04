@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.kevinwang.old_people_service.dao.SchedulesMapper">
+<mapper namespace="cn.kevinwang.old_people_service.dao.SchedulesDao">
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.old_people_service.model.po.Schedules">
             <id property="id" column="id" jdbcType="BIGINT"/>
@@ -20,4 +20,17 @@
         start_time,end_time,status,
         created_at,updated_at
     </sql>
+    <update id="updateStatusById">
+        update schedules
+        <set>
+            <if test="nextStatus != null and '' != nextStatus">
+                status = #{nextStatus},
+            </if>
+        </set>
+        <where>
+            <if test="id != null and '' != id">
+                id = #{id}
+            </if>
+        </where>
+    </update>
 </mapper>
